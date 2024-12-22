@@ -55,18 +55,23 @@ if (root == null) {
         }
  Queue<Node> queue = new LinkedList<Node>();
         queue.add(root);
+       
 
-while (queue.size() > 0) {
-            Node node = queue.remove();
-            System.out.print(node.c + " ");
+while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                Node node = queue.remove();
+                System.out.print(node.c + " ");
 
-            if (node.left != null) {
-                queue.add(node.left);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
             }
-
-            if (node.right != null) {
-                queue.add(node.right);
-            }
+            System.out.println();
         }
 
 }   
