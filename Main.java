@@ -56,7 +56,7 @@ if (root == null) {
  Queue<Node> queue = new LinkedList<Node>();
         queue.add(root);
 
-while (queue != null) {
+while (queue.size() > 0) {
             Node node = queue.remove();
             System.out.print(node.c + " ");
 
