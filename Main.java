@@ -57,9 +57,9 @@ if (root == null) {
         queue.add(root);
        
 
-while (!queue.isEmpty()) {
-            int levelSize = queue.size();
-            for (int i = 0; i < levelSize; i++) {
+while (queue.size()>0) {
+            int level = queue.size();
+            for (int i = 0; i < level; i++) {
                 Node node = queue.remove();
                 System.out.print(node.c + " ");
 
